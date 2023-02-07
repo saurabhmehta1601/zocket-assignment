@@ -1,10 +1,13 @@
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Dashboard from "./pages/Dashboard"
 
+function App() {
   return (
-    <div className="App text-3xl bg-red-500" >
-      Hello world
-      <div className="text-6xl bg-slate-800"> Heavy text</div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
