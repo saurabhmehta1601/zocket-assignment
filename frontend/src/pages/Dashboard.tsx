@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from "../styles/dashboard.module.scss"
 import DashboardMenu from '../components/DashboardMenu'
 import Header from '../components/Header'
+import AddNewCampaign from '../components/AddNewCampaign'
 
 const Dashboard = () => {
     return (
@@ -9,6 +10,7 @@ const Dashboard = () => {
             <DashboardMenu />
             <div className={styles.main}>
                 <Header />
+                <AddNewCampaign />
             </div>
         </div>
     )
