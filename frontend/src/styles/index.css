@@ -4,6 +4,8 @@
 
 :root {
   --clr-dark-1: #001738;
+  --clr-dark-2: rgba(25, 119, 243, 0.1);
+  --clr-blue-1: #1977f3;
 }
 
 @font-face {
