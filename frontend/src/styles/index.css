@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --clr-dark-1: #001738;
+}
+
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../assets/fonts/EudoxusSans/EudoxusSans-ExtraLight.ttf")
+    format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../assets/fonts/EudoxusSans/EudoxusSans-Light.ttf")
+    format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../assets/fonts/EudoxusSans/EudoxusSans-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../assets/fonts/EudoxusSans/EudoxusSans-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../assets/fonts/EudoxusSans/EudoxusSans-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Eudoxus Sans";
+  src: url("../assets/fonts/EudoxusSans/EudoxusSans-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800;
+}
+
+body {
+  @apply font-eudoxus;
+}
