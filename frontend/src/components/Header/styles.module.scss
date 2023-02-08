@@ -1,0 +1,26 @@
+.container {
+  @apply bg-white px-2 py-4 flex justify-end items-center rounded-md pr-12 gap-x-2 ;
+  border: 1px solid #dae6ff;
+  .freeTrialWarning {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .buyPlan {
+    @apply flex p-3 py-1  items-center gap-x-2;
+    color: #ff8c00;
+    background: #f29a2e1a;
+  }
+  .icon {
+    @apply mx-1;
+  }
+  .profilePicture {
+    @apply ml-2;
+  }
+  .username {
+    @apply text-sm  text-[#1b3f67];
+  }
+  .dropdown {
+    @apply h-2 w-2 bg-[#1B3F67] mr-1;
+    clip-path: polygon(100% 49%, 0 50%, 49% 100%);
+  }
+}

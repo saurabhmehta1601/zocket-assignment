@@ -6,6 +6,8 @@
   --clr-dark-1: #001738;
   --clr-dark-2: rgba(25, 119, 243, 0.1);
   --clr-blue-1: #1977f3;
+  --gradient-1: linear-gradient(0deg, #dae6ff, #dae6ff),
+    linear-gradient(0deg, #ffffff, #ffffff);
 }
 
 @font-face {
