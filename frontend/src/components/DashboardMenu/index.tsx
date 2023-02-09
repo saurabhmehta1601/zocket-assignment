@@ -9,6 +9,7 @@ import homeIconSolid from "../../assets/icons/solid/home.svg"
 import campaignIconSolid from "../../assets/icons/solid/campaign.svg"
 import customersIconSolid from "../../assets/icons/solid/customers.svg"
 import productsIconSolid from "../../assets/icons/solid/products.svg"
+import { Link } from 'react-router-dom'
 
 enum MenuItemLabel {
     HOME = "Home", CAMPAIGN = "Campaign", PRODUCTS = "Products", CUSTOMERS = "Customers"
@@ -36,38 +37,44 @@ const DashboardMenu = () => {
     return (
         <div className={styles.menu}>
             <img src={zocketLogo} alt="zocket logo" className={styles.zocketLogo} />
-            <MenuItem
-                iconSrc={homeIconOutlined}
-                activeIconSrc={homeIconSolid}
-                label={MenuItemLabel.HOME}
-                onClick={() => {
-                    setSelectedMenuItem(MenuItemLabel.HOME)
-                }}
-                isActiveMenuItem={selectedMenuItem === MenuItemLabel.HOME}
-            />
-            <MenuItem
-                iconSrc={campaignIconOutlined}
-                activeIconSrc={campaignIconSolid}
-                label={MenuItemLabel.CAMPAIGN}
-                onClick={() => {
-                    setSelectedMenuItem(MenuItemLabel.CAMPAIGN)
-                }}
-                isActiveMenuItem={selectedMenuItem === MenuItemLabel.CAMPAIGN}
-            />
-            <MenuItem
-                iconSrc={productsIconOutlined}
-                activeIconSrc={productsIconSolid}
-                label={MenuItemLabel.PRODUCTS}
-                onClick={() => setSelectedMenuItem(MenuItemLabel.PRODUCTS)}
-                isActiveMenuItem={selectedMenuItem === MenuItemLabel.PRODUCTS}
-            />
-            <MenuItem
-                iconSrc={customersIconOutlined}
-                activeIconSrc={customersIconSolid}
-                label={MenuItemLabel.CUSTOMERS}
-                onClick={() => setSelectedMenuItem(MenuItemLabel.CUSTOMERS)}
-                isActiveMenuItem={selectedMenuItem === MenuItemLabel.CUSTOMERS}
-            />
+            <Link to="/" >
+                <MenuItem
+                    onClick={() => { }}
+                    iconSrc={homeIconOutlined}
+                    activeIconSrc={homeIconSolid}
+                    label={MenuItemLabel.HOME}
+                    isActiveMenuItem={selectedMenuItem === MenuItemLabel.HOME}
+                />
+            </Link>
+            <Link to="/campaign" >
+                <MenuItem
+                    iconSrc={campaignIconOutlined}
+                    activeIconSrc={campaignIconSolid}
+                    label={MenuItemLabel.CAMPAIGN}
+                    onClick={() => {
+                        setSelectedMenuItem(MenuItemLabel.CAMPAIGN)
+                    }}
+                    isActiveMenuItem={selectedMenuItem === MenuItemLabel.CAMPAIGN}
+                />
+            </Link>
+            <Link to="/products">
+                <MenuItem
+                    iconSrc={productsIconOutlined}
+                    activeIconSrc={productsIconSolid}
+                    label={MenuItemLabel.PRODUCTS}
+                    onClick={() => setSelectedMenuItem(MenuItemLabel.PRODUCTS)}
+                    isActiveMenuItem={selectedMenuItem === MenuItemLabel.PRODUCTS}
+                />
+            </Link>
+            <Link to={"/customers"}>
+                <MenuItem
+                    iconSrc={customersIconOutlined}
+                    activeIconSrc={customersIconSolid}
+                    label={MenuItemLabel.CUSTOMERS}
+                    onClick={() => setSelectedMenuItem(MenuItemLabel.CUSTOMERS)}
+                    isActiveMenuItem={selectedMenuItem === MenuItemLabel.CUSTOMERS}
+                />
+            </Link>
         </div>
     )
 }

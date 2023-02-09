@@ -7,6 +7,7 @@ interface IProps {
     children: React.ReactNode
 }
 const DashboardLayout = ({ children }: IProps) => {
+    console.log("dashboardLayout rendered ")
     return (
         <div className={styles.container}>
             <DashboardMenu />
