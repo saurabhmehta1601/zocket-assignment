@@ -10,11 +10,15 @@ import campaignIconSolid from "../../assets/icons/solid/campaign.svg"
 import customersIconSolid from "../../assets/icons/solid/customers.svg"
 import productsIconSolid from "../../assets/icons/solid/products.svg"
 import { Link } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../../hooks/redux'
+import { setDashboardActiveMenuItem } from '../../redux/features/dashboardSlice'
 
 enum MenuItemLabel {
-    HOME = "Home", CAMPAIGN = "Campaign", PRODUCTS = "Products", CUSTOMERS = "Customers"
+    HOME = "Home",
+    CAMPAIGNS = "Campaigns",
+    CUSTOMERS = "Customers",
+    PRODUCTS = "Products"
 }
-
 
 interface IMenuItem {
     isActiveMenuItem: boolean,
@@ -25,7 +29,9 @@ interface IMenuItem {
 }
 
 const MenuItem = ({ isActiveMenuItem, label, iconSrc, onClick, activeIconSrc }: IMenuItem) => (
-    <div className={[styles.menuItem, isActiveMenuItem ? styles.activeMenuItem : ""].join(" ")} onClick={onClick}>
+    <div
+        className={[styles.menuItem, isActiveMenuItem ? styles.activeMenuItem : ""].join(" ")}
+        onClick={onClick}>
         <img src={isActiveMenuItem ? activeIconSrc : iconSrc} alt={label} className={styles.menuIcon} />
         <p className={styles.label}>{label}</p>
     </div>
@@ -33,13 +39,16 @@ const MenuItem = ({ isActiveMenuItem, label, iconSrc, onClick, activeIconSrc }: 
 
 
 const DashboardMenu = () => {
-    const [selectedMenuItem, setSelectedMenuItem] = useState(MenuItemLabel.HOME)
+    const dispatch = useAppDispatch()
+    const selectedMenuItem = useAppSelector(state => state.dashboard.activeDashboardMenuItem)
     return (
         <div className={styles.menu}>
             <img src={zocketLogo} alt="zocket logo" className={styles.zocketLogo} />
             <Link to="/" >
                 <MenuItem
-                    onClick={() => { }}
+                    onClick={() => {
+                        dispatch(setDashboardActiveMenuItem(MenuItemLabel.HOME))
+                    }}
                     iconSrc={homeIconOutlined}
                     activeIconSrc={homeIconSolid}
                     label={MenuItemLabel.HOME}
@@ -50,11 +59,11 @@ const DashboardMenu = () => {
                 <MenuItem
                     iconSrc={campaignIconOutlined}
                     activeIconSrc={campaignIconSolid}
-                    label={MenuItemLabel.CAMPAIGN}
+                    label={MenuItemLabel.CAMPAIGNS}
                     onClick={() => {
-                        setSelectedMenuItem(MenuItemLabel.CAMPAIGN)
+                        dispatch(setDashboardActiveMenuItem(MenuItemLabel.CAMPAIGNS))
                     }}
-                    isActiveMenuItem={selectedMenuItem === MenuItemLabel.CAMPAIGN}
+                    isActiveMenuItem={selectedMenuItem === MenuItemLabel.CAMPAIGNS}
                 />
             </Link>
             <Link to="/products">
@@ -62,7 +71,9 @@ const DashboardMenu = () => {
                     iconSrc={productsIconOutlined}
                     activeIconSrc={productsIconSolid}
                     label={MenuItemLabel.PRODUCTS}
-                    onClick={() => setSelectedMenuItem(MenuItemLabel.PRODUCTS)}
+                    onClick={() => {
+                        dispatch(setDashboardActiveMenuItem(MenuItemLabel.PRODUCTS))
+                    }}
                     isActiveMenuItem={selectedMenuItem === MenuItemLabel.PRODUCTS}
                 />
             </Link>
@@ -71,7 +82,9 @@ const DashboardMenu = () => {
                     iconSrc={customersIconOutlined}
                     activeIconSrc={customersIconSolid}
                     label={MenuItemLabel.CUSTOMERS}
-                    onClick={() => setSelectedMenuItem(MenuItemLabel.CUSTOMERS)}
+                    onClick={() => {
+                        dispatch(setDashboardActiveMenuItem(MenuItemLabel.CUSTOMERS))
+                    }}
                     isActiveMenuItem={selectedMenuItem === MenuItemLabel.CUSTOMERS}
                 />
             </Link>
