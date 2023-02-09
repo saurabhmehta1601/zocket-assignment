@@ -4,6 +4,9 @@
   .main {
     @apply flex-1;
     background-color: #f6f9ff;
+
+    .mainContent {
+      @apply px-10 py-8;
+    }
   }
 }
-

@@ -12,7 +12,9 @@ const DashboardLayout = ({ children }: IProps) => {
             <DashboardMenu />
             <div className={styles.main}>
                 <Header />
-                {children}
+                <div className={styles.mainContent}>
+                    {children}
+                </div>
             </div>
         </div>
     )
