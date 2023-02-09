@@ -1,0 +1,55 @@
+.container {
+  @apply px-8 mt-2 flex justify-between items-center;
+
+  svg {
+    fill: black;
+  }
+  .step {
+    @apply p-2 rounded-full;
+    background-color: #e4eaf2;
+  }
+
+  .icon {
+    @apply h-8 w-8;
+    background-color: #abb5c2;
+  }
+  .bulbIcon {
+    @extend .icon;
+    background-color: #abb5c2;
+    -webkit-mask: url(../../assets/icons/solid/bulb.svg) no-repeat center;
+    mask: url(../../assets/icons/solid/bulb.svg) no-repeat center;
+  }
+  .productsIcon {
+    @extend .icon;
+    -webkit-mask: url(../../assets/icons/solid/products.svg) no-repeat center;
+    mask: url(../../assets/icons/solid/products.svg) no-repeat center;
+  }
+  .appointmentsIcon {
+    @extend .icon;
+    -webkit-mask: url(../../assets/icons/solid/appointments.svg) no-repeat
+      center;
+    mask: url(../../assets/icons/solid/appointments.svg) no-repeat center;
+  }
+  .tickIcon {
+    @extend .icon;
+    background-color: #abb5c2;
+    -webkit-mask: url(../../assets/icons/solid/tick.svg) no-repeat center;
+    mask: url(../../assets/icons/solid/tick.svg) no-repeat center;
+  }
+  .bagIcon {
+    @extend .icon;
+    background-color: #abb5c2;
+    -webkit-mask: url(../../assets/icons/solid/products.svg) no-repeat center;
+    mask: url(logo.svg) no-repeat center;
+  }
+  .activeStep {
+    background-color: #f29a2e;
+  }
+  .activeStep .icon {
+    background-color: white;
+  }
+  .separator {
+    @apply flex-1 h-1;
+    background-color: #e7eaf0;
+  }
+}

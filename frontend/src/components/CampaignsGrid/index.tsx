@@ -58,7 +58,7 @@ const CampaignList = () => {
 
                 {/* All campaigns */}
                 {campaigns.map(camp => (
-                    <CampaignGridRow campaign={camp} />
+                    <CampaignGridRow key={camp.name} campaign={camp} />
                 ))}
             </div>
 

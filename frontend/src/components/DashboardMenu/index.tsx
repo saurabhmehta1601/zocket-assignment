@@ -40,14 +40,18 @@ const DashboardMenu = () => {
                 iconSrc={homeIconOutlined}
                 activeIconSrc={homeIconSolid}
                 label={MenuItemLabel.HOME}
-                onClick={() => setSelectedMenuItem(MenuItemLabel.HOME)}
+                onClick={() => {
+                    setSelectedMenuItem(MenuItemLabel.HOME)
+                }}
                 isActiveMenuItem={selectedMenuItem === MenuItemLabel.HOME}
             />
             <MenuItem
                 iconSrc={campaignIconOutlined}
                 activeIconSrc={campaignIconSolid}
                 label={MenuItemLabel.CAMPAIGN}
-                onClick={() => setSelectedMenuItem(MenuItemLabel.CAMPAIGN)}
+                onClick={() => {
+                    setSelectedMenuItem(MenuItemLabel.CAMPAIGN)
+                }}
                 isActiveMenuItem={selectedMenuItem === MenuItemLabel.CAMPAIGN}
             />
             <MenuItem
