@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./dashboardLayout.module.scss"
-import DashboardMenu from '../DashboardMenu'
-import Header from '../Header'
+import DashboardMenu from '../components/DashboardMenu'
+import Header from '../components/Header'
 
 interface IProps {
     children: React.ReactNode

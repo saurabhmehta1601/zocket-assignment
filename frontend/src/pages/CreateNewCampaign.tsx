@@ -1,5 +1,5 @@
 import React from 'react'
-import DashboardLayout from '../components/Layout/DashboardLayout'
+import DashboardLayout from '../Layout/DashboardLayout'
 import styles from "../styles/createNewCampaign.module.scss"
 import MultiStepForm from '../components/MultiStepForm'
 

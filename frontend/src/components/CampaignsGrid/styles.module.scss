@@ -1,36 +1,31 @@
-.container {
-  @apply bg-white my-2 rounded-lg p-6;
-  border: 1px solid #dae6ff;
+.filters {
+  @apply flex gap-x-2 text-sm;
+  .filter {
+    @apply flex items-center gap-x-2 cursor-pointer;
 
-  .filters {
-    @apply flex gap-x-2 text-sm;
-    .filter {
-      @apply flex items-center gap-x-2 cursor-pointer;
-
-      .label {
-        color: rgba(0, 0, 0, 0.5);
-      }
-      .selectContainer {
-        @apply rounded-lg py-2 px-4 cursor-pointer;
-        border: 1.5px solid #e9e9e9;
-        select {
-          @apply outline-none cursor-pointer;
-        }
+    .label {
+      color: rgba(0, 0, 0, 0.5);
+    }
+    .selectContainer {
+      @apply rounded-lg py-2 px-4 cursor-pointer;
+      border: 1.5px solid #e9e9e9;
+      select {
+        @apply outline-none cursor-pointer;
       }
     }
   }
+}
 
-  .search {
-    @apply flex gap-x-2 rounded-lg px-4 py-2;
-    border: 1.5px solid #e9e9e9;
-    img {
-      @apply h-6 w-6;
-    }
-    input {
-      @apply flex-1 bg-transparent text-sm outline-none min-w-[200px];
-      &::placeholder {
-        @apply text-[rgba(0,0,0,0.5)];
-      }
+.search {
+  @apply flex gap-x-2 rounded-lg px-4 py-2;
+  border: 1.5px solid #e9e9e9;
+  img {
+    @apply h-6 w-6;
+  }
+  input {
+    @apply flex-1 bg-transparent text-sm outline-none min-w-[200px];
+    &::placeholder {
+      @apply text-[rgba(0,0,0,0.5)];
     }
   }
 }
@@ -86,7 +81,7 @@
       }
       .offSwitchImg {
         @extend .switchHandleImg;
-        @apply top-[4px]  right-3 ;
+        @apply top-[4px]  right-3;
       }
     }
     .campaign {
@@ -135,8 +130,8 @@
       }
     }
   }
-}
 
-.flexVertical {
-  @apply flex flex-col items-center;
+  .flexVertical {
+    @apply flex flex-col items-center;
+  }
 }

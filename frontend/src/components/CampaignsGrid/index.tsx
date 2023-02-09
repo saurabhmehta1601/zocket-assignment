@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from "./styles.module.scss"
 import SearchIcon from "../../assets/icons/outlined/search.svg"
-import { campaigns } from "../../data/campaigns"
+import { campaigns } from "../../constants/campaigns"
 import CampaignGridRow from './CampaignGridRow'
+import Card from '../Card'
 
 const CampaignList = () => {
     return (
-        <div className={styles.container}>
+        <Card >
             <div className={styles.flexBetween}>
                 <div className={styles.search}>
                     <img src={SearchIcon} alt="search" />
@@ -62,7 +63,7 @@ const CampaignList = () => {
                 ))}
             </div>
 
-        </div>
+        </Card>
     )
 }
 

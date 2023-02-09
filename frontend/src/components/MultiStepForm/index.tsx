@@ -3,6 +3,7 @@ import styles from "./styles.module.scss"
 import tickIcon from "../../assets/icons/solid/tick.png"
 import appointmentsIcon from "../../assets/icons/solid/appointments.png"
 import bagIcon from "../../assets/icons/solid/products.svg"
+import Step1 from './Step1'
 
 interface IProps {
     activeStep: number
@@ -11,29 +12,33 @@ interface IProps {
 const MultiStepForm = ({ activeStep }: IProps) => {
     return (
         <div className={styles.container}>
-            <div
-                className={[styles.step, activeStep === 1 ? styles.activeStep : ""].join(" ")}
-            >
-                <div className={styles.bulbIcon}></div>
+            <div className={styles.multilineAction}>
+                <div
+                    className={[styles.step, activeStep === 1 ? styles.activeStep : ""].join(" ")}
+                >
+                    <div className={styles.bulbIcon}></div>
+                </div>
+                <div className={styles.separator}></div>
+                <div
+                    className={[styles.step, activeStep === 2 ? styles.activeStep : ""].join(" ")}
+                >
+                    <div className={styles.productsIcon}></div>
+                </div>
+                <div className={styles.separator}></div>
+                <div
+                    className={[styles.step, activeStep === 3 ? styles.activeStep : ""].join(" ")}
+                >
+                    <div className={styles.appointmentsIcon}></div>
+                </div>
+                <div className={styles.separator}></div>
+                <div
+                    className={[styles.step, activeStep === 4 ? styles.activeStep : ""].join(" ")}
+                >
+                    <div className={styles.tickIcon}></div>
+                </div>
+
             </div>
-            <div className={styles.separator}></div>
-            <div
-                className={[styles.step, activeStep === 2 ? styles.activeStep : ""].join(" ")}
-            >
-                <div className={styles.productsIcon}></div>
-            </div>
-            <div className={styles.separator}></div>
-            <div
-                className={[styles.step, activeStep === 3 ? styles.activeStep : ""].join(" ")}
-            >
-                <div className={styles.appointmentsIcon}></div>
-            </div>
-            <div className={styles.separator}></div>
-            <div
-                className={[styles.step, activeStep === 4 ? styles.activeStep : ""].join(" ")}
-            >
-                <div className={styles.tickIcon}></div>
-            </div>
+            {activeStep === 1 && (<Step1 />)}
         </div>
     )
 }

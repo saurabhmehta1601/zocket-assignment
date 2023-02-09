@@ -1,11 +1,12 @@
 import React from 'react'
+import styles from "./styles.module.scss"
 
 interface IProps {
     children: React.ReactNode
 }
 const Card = ({ children }: IProps) => {
     return (
-        <div>{children}</div>
+        <div className={styles.container}>{children}</div>
     )
 }
 

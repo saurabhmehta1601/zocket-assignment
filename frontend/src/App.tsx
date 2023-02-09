@@ -4,7 +4,7 @@ import AllCampaigns from "./pages/AllCampaigns"
 import Home from "./pages/Home"
 import Customers from "./pages/Customers"
 import Products from "./pages/Products"
-import DashboardLayout from "./components/Layout/DashboardLayout"
+import DashboardLayout from "./Layout/DashboardLayout"
 
 function App() {
   return (
