@@ -1,11 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Dashboard from "./pages/Dashboard"
+import CreateNewCampaign from "./pages/CreateNewCampaign"
+import AllCampaigns from "./pages/AllCampaigns"
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/campaigns/all" element={<AllCampaigns />} />
+        <Route path="/" element={<CreateNewCampaign />} />
       </Routes>
     </BrowserRouter>
   )
