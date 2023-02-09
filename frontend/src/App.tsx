@@ -6,8 +6,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/campaigns/all" element={<AllCampaigns />} />
-        <Route path="/" element={<CreateNewCampaign />} />
+        <Route path="/campaign/all" element={<AllCampaigns />} />
+        <Route path="/campaign/create" element={<CreateNewCampaign />} />
       </Routes>
     </BrowserRouter>
   )

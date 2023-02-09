@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./styles.module.scss"
-import SearchIcon from "../../../assets/icons/outlined/search.svg"
-import { campaigns } from "../../../data/campaigns"
+import SearchIcon from "../../assets/icons/outlined/search.svg"
+import { campaigns } from "../../data/campaigns"
 import CampaignGridRow from './CampaignGridRow'
 
 const CampaignList = () => {

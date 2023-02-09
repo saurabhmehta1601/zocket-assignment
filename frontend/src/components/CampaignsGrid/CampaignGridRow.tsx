@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from "./styles.module.scss"
-import facebookLogo from "../../../assets/logos/facebook.svg"
-import youtubeLogo from "../../../assets/logos/youtube.svg"
-import googleLogo from "../../../assets/logos/google.svg"
-import editLogo from "../../../assets/icons/outlined/edit.svg"
-import deleteLogo from "../../../assets/icons/outlined/delete.svg"
-import plusLogo from "../../../assets/icons/outlined/plus.png"
-import minusLogo from "../../../assets/icons/outlined/minus.png"
+import facebookLogo from "../../assets/logos/facebook.svg"
+import youtubeLogo from "../../assets/logos/youtube.svg"
+import googleLogo from "../../assets/logos/google.svg"
+import editLogo from "../../assets/icons/outlined/edit.svg"
+import deleteLogo from "../../assets/icons/outlined/delete.svg"
+import plusLogo from "../../assets/icons/outlined/plus.png"
+import minusLogo from "../../assets/icons/outlined/minus.png"
 import ReactSwitch from "react-switch"
 
 interface IProps {

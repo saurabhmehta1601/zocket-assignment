@@ -3,7 +3,9 @@ import React from 'react'
 
 const CreateNewCampaign = () => {
     return (
-        <DashboardLayout>CreateNewCampaign</DashboardLayout>
+        <DashboardLayout>
+            <p className="h3"></p>
+        </DashboardLayout>
     )
 }
 
