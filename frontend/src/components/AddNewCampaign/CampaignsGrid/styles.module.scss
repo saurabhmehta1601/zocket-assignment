@@ -1,0 +1,142 @@
+.container {
+  @apply bg-white my-2 rounded-lg p-6;
+  border: 1px solid #dae6ff;
+
+  .filters {
+    @apply flex gap-x-2 text-sm;
+    .filter {
+      @apply flex items-center gap-x-2 cursor-pointer;
+
+      .label {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .selectContainer {
+        @apply rounded-lg py-2 px-4 cursor-pointer;
+        border: 1.5px solid #e9e9e9;
+        select {
+          @apply outline-none cursor-pointer;
+        }
+      }
+    }
+  }
+
+  .search {
+    @apply flex gap-x-2 rounded-lg px-4 py-2;
+    border: 1.5px solid #e9e9e9;
+    img {
+      @apply h-6 w-6;
+    }
+    input {
+      @apply flex-1 bg-transparent text-sm outline-none min-w-[200px];
+      &::placeholder {
+        @apply text-[rgba(0,0,0,0.5)];
+      }
+    }
+  }
+}
+
+.flexBetween {
+  @apply flex justify-between items-center;
+}
+
+.table {
+  .row {
+    @apply grid pt-4 text-sm    w-full gap-x-2;
+    div {
+      text-align: center;
+    }
+    grid-template-columns: 1fr 1fr 4fr 3fr 1fr 1.5fr 1.5fr 1fr 1.5fr 1fr;
+
+    &:first-child {
+      @apply gap-x-0;
+    }
+    .th {
+      @apply py-2;
+      color: rgba(0, 0, 0, 0.5);
+      background-color: #f8f8f8;
+      border-top: 1.5px solid #eaeaea;
+      border-bottom: 1.5px solid #eaeaea;
+    }
+    .th:nth-child(1) {
+      border-left: 1.5px solid #eaeaea;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    .th:nth-child(10) {
+      border-right: 1.5px solid #eaeaea;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    div:nth-child(10n + 1) {
+      @apply pl-4;
+    }
+
+    .selectRow {
+      @apply grid place-items-center;
+    }
+
+    .isOn {
+      @apply grid place-items-center;
+      .switchHandleImg {
+        @apply w-3 h-3 m-auto relative;
+      }
+      .onSwitchImg {
+        @extend .switchHandleImg;
+        @apply top-[4px];
+      }
+      .offSwitchImg {
+        @extend .switchHandleImg;
+        @apply top-[4px]  right-3 ;
+      }
+    }
+    .campaign {
+      @apply flex;
+      .name {
+        @apply font-semibold;
+      }
+      .createdOn {
+        @apply text-[rgba(0,0,0,0.5)] text-sm;
+      }
+      img {
+        @apply w-9 h-9 ml-3;
+      }
+    }
+
+    .platform {
+      @apply flex justify-center;
+      img {
+        @apply w-6 h-6;
+      }
+    }
+
+    .status {
+      @apply py-2 px-4 flex justify-center text-xs rounded-2xl;
+    }
+
+    .liveNow {
+      @extend .status;
+      color: rgba(49, 124, 46, 1);
+      background-color: #e1ffe0;
+    }
+    .paused {
+      @extend .status;
+      color: rgba(209, 163, 7, 1);
+      background-color: rgba(255, 248, 224, 1);
+    }
+    .exhausted {
+      @extend .status;
+      color: #fc3f3f;
+      background-color: #ffdede;
+    }
+    .action {
+      @apply ml-2 flex gap-x-2 items-center;
+      img {
+        @apply cursor-pointer w-5 h-5;
+      }
+    }
+  }
+}
+
+.flexVertical {
+  @apply flex flex-col items-center;
+}

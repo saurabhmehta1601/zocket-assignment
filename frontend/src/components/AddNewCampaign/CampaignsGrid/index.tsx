@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from "./styles.module.scss"
 import SearchIcon from "../../../assets/icons/outlined/search.svg"
+import { campaigns } from "../../../data/campaigns"
+import CampaignGridRow from './CampaignGridRow'
 
 const CampaignList = () => {
     return (
@@ -40,21 +42,6 @@ const CampaignList = () => {
                     </div>
                 </div>
             </div>
-            {/* Campign Table*/}
-            {/* <table className={styles.table}>
-                <tr >
-                    <th> <input type="checkbox" /> </th>
-                    <th>On/Off</th>
-                    <th>Campaign</th>
-                    <th>Date Range</th>
-                    <th>Clicks</th>
-                    <th>Budget</th>
-                    <th>Location</th>
-                    <th>Platform</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </table> */}
             <div className={styles.table}>
                 <div className={styles.row}>
                     <div className={styles.th}> <input type="checkbox" /> </div>
@@ -64,26 +51,15 @@ const CampaignList = () => {
                     <div className={styles.th}>Clicks</div>
                     <div className={styles.th}>Budget</div>
                     <div className={styles.th}>Location</div>
-                    <div className={styles.th}>Platform</div>
+                    <div className={[styles.th, styles.platform].join(" ")}>Platform</div>
                     <div className={styles.th}>Status</div>
                     <div className={styles.th}>Action</div>
                 </div>
 
-                {/* ROW 1 */}
-                <div className={styles.row}>
-                    <div > <input type="checkbox" checked /> </div>
-                    <div >On</div>
-                    <div >Facebook Rockstar theme game </div>
-                    <div >Date Range</div>
-                    <div >Clicks</div>
-                    <div >Budget</div>
-                    <div >Location</div>
-                    <div >Platform</div>
-                    <div >Status</div>
-                    <div >Action</div>
-
-                </div>
-
+                {/* All campaigns */}
+                {campaigns.map(camp => (
+                    <CampaignGridRow campaign={camp} />
+                ))}
             </div>
 
         </div>

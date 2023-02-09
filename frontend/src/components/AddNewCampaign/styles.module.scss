@@ -1,5 +1,5 @@
 .container {
-  @apply px-10 py-12;
+  @apply px-10 py-8 ;
 }
 
 .h3 {
@@ -11,7 +11,7 @@
 }
 
 .addCampaignBtn {
-  @apply flex gap-x-2 bg-[#0F6EFF] text-white px-4 py-2 rounded-lg cursor-pointer;
+  @apply flex gap-x-2 bg-[#0F6EFF] text-white px-4 py-2 rounded-lg cursor-pointer mb-2;
 }
 
 .flexBetween {
