@@ -1,35 +1,30 @@
-.h5 {
-  @apply font-semibold text-lg;
-}
-.secondaryText {
-  @apply ml-1 text-sm font-medium;
-  color: rgba(0, 0, 0, 0.5);
-}
-.hr {
-  @apply mt-2;
-  height: 2px;
-  background-color: #eaeaea;
-}
-
 .actionGrid {
   @apply grid grid-cols-3 gap-x-2 gap-y-3 mt-4;
 
   .actionItem {
-    @apply flex items-center gap-x-4 rounded-lg p-3;
+    @apply relative flex items-center gap-x-6 rounded-lg p-3 cursor-pointer;
     border: 1.5px solid #f3f3f3;
 
     img {
       @apply ml-2;
     }
     .primaryText {
-      @apply text-lg;
+      @apply font-semibold text-sm;
     }
-    .secondaryText {
+
+    .smallText {
       @apply text-xs;
+    }
+
+    .checkIcon {
+      @apply w-6 h-6 absolute -right-2 -top-3 grid place-items-center z-10 opacity-100;
+      img {
+        @apply w-full h-full;
+      }
     }
   }
 }
 
-.primaryButton {
-  @apply  bg-[#0F6EFF] text-white px-16 py-2 rounded-lg cursor-pointer mb-2;
+.activeAction {
+  border-color: #0f6eff !important;
 }

@@ -1,15 +1,12 @@
 import React from 'react'
 import styles from "./styles.module.scss"
-import tickIcon from "../../assets/icons/solid/tick.png"
-import appointmentsIcon from "../../assets/icons/solid/appointments.png"
-import bagIcon from "../../assets/icons/solid/products.svg"
 import Step1 from './Step1'
+import { useAppSelector } from '../../hooks/redux'
+import Step2 from './Step2'
+import Step3 from './Step3'
 
-interface IProps {
-    activeStep: number
-}
-
-const MultiStepForm = ({ activeStep }: IProps) => {
+const MultiStepForm = () => {
+    const activeStep = useAppSelector(state => state.createCampaign.activeStep)
     return (
         <div className={styles.container}>
             <div className={styles.multilineAction}>
@@ -39,6 +36,8 @@ const MultiStepForm = ({ activeStep }: IProps) => {
 
             </div>
             {activeStep === 1 && (<Step1 />)}
+            {activeStep === 2 && (<Step2 />)}
+            {activeStep === 3 && (<Step3 />)}
         </div>
     )
 }

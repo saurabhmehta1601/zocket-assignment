@@ -1,0 +1,27 @@
+.container {
+  @apply flex gap-x-4 rounded-lg p-2 cursor-pointer items-center;
+  border: 1.5px solid #f3f3f3;
+  .image {
+    @apply w-12 h-12;
+    img {
+      @apply w-full h-full object-cover rounded-md;
+    }
+  }
+  .price {
+    @apply text-xs;
+  }
+  .tickIcon {
+    @apply w-8 h-8 grid place-items-center;
+    background-color: #d8d8d8;
+    mask: url("../../../../assets/icons/outlined/tick-circle.svg") no-repeat
+      center;
+  }
+}
+
+.selected {
+  border-color: #0f6eff;
+  .tickIcon {
+    mask: url("../../../../assets/icons/solid/tick-circle.svg") no-repeat center;
+    background-color: #0f6eff;
+  }
+}
