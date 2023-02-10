@@ -23,7 +23,7 @@ const Product = ({ product, isSelected, onClick }: IProps) => {
                 <div className='text-sm font-semibold'>{product.name}</div>
                 <div className={['secondaryText', styles.price].join(" ")}>{product.price}</div>
             </div>
-            <div className={styles.tickIcon}></div> :
+            <div className={styles.tickIcon}></div> 
         </div>
     )
 }
