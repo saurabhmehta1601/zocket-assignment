@@ -4,9 +4,10 @@ import styles from "./styles.module.scss"
 interface IProps {
     button1Text: string
     button2Text: string
+    initialSelectedButton?: number
 }
-const ButtonSwitch = ({ button1Text, button2Text }: IProps) => {
-    const [selectedButton, setSelectedButton] = useState(1)
+const ButtonSwitch = ({ button1Text, button2Text, initialSelectedButton }: IProps) => {
+    const [selectedButton, setSelectedButton] = useState(initialSelectedButton ? initialSelectedButton : 1)
     return (
         <div className={styles.buttonGroup}>
             <button
