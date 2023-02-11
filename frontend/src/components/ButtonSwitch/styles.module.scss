@@ -1,0 +1,12 @@
+.buttonGroup {
+  @apply rounded-3xl;
+  background-color: #f0f0f0;
+  button {
+    @apply rounded-3xl text-[#999999] text-sm px-6 py-2;
+    min-width: 100px;
+  }
+  .selectedButton {
+    @apply text-white;
+    background-color: #0f6eff;
+  }
+}

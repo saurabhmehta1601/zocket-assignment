@@ -1,0 +1,10 @@
+.numberIcon {
+  @apply h-5 w-5 text-sm rounded-full grid place-items-center bg-blue-600 text-white;
+}
+
+.verticalLine {
+  @apply self-stretch ml-2 mr-7 rounded-md;
+  border: 1.5px solid rgba(0, 0, 0, 0.16);
+}
+
+
