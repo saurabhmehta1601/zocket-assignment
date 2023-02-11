@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "./styles.module.scss"
 import tickCircleBlue from "../../../../assets/icons/solid/tick-circle-blue.svg"
+import thumbIcon from "../../../../assets/icons/solid/thumb.svg"
 
 interface IProps {
     isSelected: boolean,
@@ -30,8 +31,15 @@ const ProductCard = ({ isSelected, onClick, campaign: { name, sponsered, ownerIm
             <div className='text-sm text-[14px]'> {text} </div>
             <div>
                 <img src={posterImg} alt="campaign poster" className='mt-2' />
-                <div className='bg-[#F5F5F5]'>
-                    <div className='text-[#2B23A5] text-[14px] font-semibold px-4 py-2'>{name}</div>
+                <div className='bg-[#F5F5F5] flex justify-between items-center py-2'>
+                    <div className='text-[#2B23A5] text-[14px] font-semibold px-4 py-2'>{name}
+                    </div>
+                    <div className={styles.likeContainer}>
+                        <div>
+                            <img src={thumbIcon} alt="like" />
+                        </div>
+                        <div className={['secondaryText', styles.text].join(" ")}>Like</div>
+                    </div>
                 </div>
                 {isSelected && <div className="flex justify-between mt-2">
                     <div

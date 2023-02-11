@@ -8,3 +8,12 @@
   color: #0f6eff;
   background-color: rgba(15, 110, 255, 0.1);
 }
+
+.likeContainer {
+  @apply flex items-center py-1 px-4 gap-x-2  mr-1;
+  color: #4b4f56;
+  border: 1px solid #ced0d4;
+  .text {
+    @apply text-sm;
+  }
+}
