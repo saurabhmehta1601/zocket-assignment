@@ -4,6 +4,7 @@ import Step1 from './Step1'
 import { useAppSelector } from '../../hooks/redux'
 import Step2 from './Step2'
 import Step3 from './Step3'
+import Step4 from './Step4'
 
 const MultiStepForm = () => {
     const activeStep = useAppSelector(state => state.createCampaign.activeStep)
@@ -38,6 +39,7 @@ const MultiStepForm = () => {
             {activeStep === 1 && (<Step1 />)}
             {activeStep === 2 && (<Step2 />)}
             {activeStep === 3 && (<Step3 />)}
+            {activeStep === 4 && (<Step4 />)}
         </div>
     )
 }

@@ -1,0 +1,10 @@
+.selected {
+  //   border: 1.5 px solid #0f6eff;
+  border-color: #0f6eff;
+}
+
+.button {
+  @apply font-eudoxus w-fit p-2 rounded-md text-sm;
+  color: #0f6eff;
+  background-color: rgba(15, 110, 255, 0.1);
+}

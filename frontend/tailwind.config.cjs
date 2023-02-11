@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         eudoxus: ["Eudoxus Sans", "sans-serif"],
+        gilroy: ["Gilroy", "sans-serif"],
       },
     },
   },
