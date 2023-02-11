@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from "./styles.module.scss"
-import zocketLogo from "../../assets/logos/zocket.svg"
+import zocketLogo from "/zocket.svg"
 import homeIconOutlined from "../../assets/icons/outlined/home.svg"
 import campaignIconOutlined from "../../assets/icons/outlined/campaign.svg"
 import customersIconOutlined from "../../assets/icons/outlined/customers.svg"
